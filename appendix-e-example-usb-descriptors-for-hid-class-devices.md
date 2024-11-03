@@ -31,6 +31,34 @@
 |-|-|-|-|
 |MaxPower|8/1|Maximum power consumption of USB device from bus in this specific configuration when the device is fully operational. Expressed in 2 mA units. The number chosen for this example is arbitrary|0x32|
 
+## E.6 Report Descriptor (Keyboard)
+
+|Item|Value (Hex)|
+|-|-|
+|`Usage Page (Generic Desktop),`|05 01|
+|`Usage (Keyboard),`|09 06|
+|`Collection (Application),`|A1 01|
+|`  Usage Page (Key Codes);`|05 07|
+|`  Usage Minimum (224),`|19 E0|
+|`  Usage Maximum (231),`|29 E7|
+|`  Logical Minimum (0),`|15 00|
+|`  Logical Maximum (1),`|25 01|
+|`  Report Size (1),`|75 01|
+|`  Report Count (8),`|95 08|
+|`  Input (Data, Variable, Absolute), ;Modifier byte`|81 02|
+|`  Report Count (1),`|95 01|
+|`  Report Size (8),`|75 08|
+|`  Input (Constant), ; Reserved byte`|81 01|
+|`  Report Count (6),`|95 06|
+|`  Report Size (8),`|75 08|
+|`  Logical Minimum (0),`|15 00|
+|`  Logical Maximum(101),`|25 65|
+|`  Usage Page (Key Codes),`|05 07|
+|`  Usage Minimum (0),`|19 00|
+|`  Usage Maximum (101),`|29 65|
+|`  Input (Data, Array), ; Key arrays (6 bytes)`|81 00|
+|`End Collection`|C0|
+
 ## E.11 String Descriptors
 
 |Part|Offset/Size (Bytes)|Description|Sample Value|
